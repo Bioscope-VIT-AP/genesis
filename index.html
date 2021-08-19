@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Use the latest (edge) version of IE rendering engine -->
+    <title>EmailTemplate-Responsive</title>
+    <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <!-- Please use an inliner tool to convert all CSS to inline as inpage or external CSS is removed by email clients -->
+    <!-- important in CSS is used to prevent the styles of currently inline CSS from overriding the ones mentioned in media queries when corresponding screen sizes are encountered -->
+
+    <!-- CSS Reset -->
+    <style type="text/css">
+/* What it does: Remove spaces around the email design added by some email clients. */
+      /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+html,  body {
+	margin: 0 !important;
+	padding: 0 !important;
+	height: 100% !important;
+	width: 100% !important;
+}
+/* What it does: Stops email clients resizing small text. */
+* {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+/* What it does: Forces Outlook.com to display emails full width. */
+.ExternalClass {
+	width: 100%;
+}
+/* What is does: Centers email on Android 4.4 */
+div[style*="margin: 16px 0"] {
+	margin: 0 !important;
+}
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+table,  td {
+	mso-table-lspace: 0pt !important;
+	mso-table-rspace: 0pt !important;
+}
+/* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+table {
+	border-spacing: 0 !important;
+	border-collapse: collapse !important;
+	table-layout: fixed !important;
+	margin: 0 auto !important;
+}
+table table table {
+	table-layout: auto;
+}
+/* What it does: Uses a better rendering method when resizing images in IE. */
+img {
+	-ms-interpolation-mode: bicubic;
+}
+/* What it does: Overrides styles added when Yahoo's auto-senses a link. */
+.yshortcuts a {
+	border-bottom: none !important;
+}
+/* What it does: Another work-around for iOS meddling in triggered links. */
+a[x-apple-data-detectors] {
+	color: inherit !important;
+}
+
+@media screen{
+.textbg {
+}
+}
+    </style>
+
+    <!-- Progressive Enhancements -->
+    <style type="text/css">
+        
+        /* What it does: Hover styles for buttons */
+        .button-td,
+        .button-a {
+            transition: all 100ms ease-in;
+        }
+        .button-td:hover,
+        .button-a:hover {
+            background: #555555 !important;
+            border-color: #555555 !important;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 600px) {
+
+            .email-container {
+                width: 100% !important;
+            }
+
+            /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+            .fluid,
+            .fluid-centered {
+                max-width: 100% !important;
+                height: auto !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            /* And center justify these ones. */
+            .fluid-centered {
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            /* What it does: Forces table cells into full-width rows. */
+            .stack-column,
+            .stack-column-center {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                direction: ltr !important;
+            }
+            /* And center justify these ones. */
+            .stack-column-center {
+                text-align: center !important;
+            }
+        
+            /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+            .center-on-narrow {
+                text-align: center !important;
+                display: block !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                float: none !important;
+            }
+            table.center-on-narrow {
+                display: inline-block !important;
+            }
+                
+        }
+
+    </style>
+    </head>
+    <body bgcolor="#000000" width="100%" style="margin: 0;" yahoo="yahoo">
+    <table bgcolor="#0C0F58" cellpadding="0" cellspacing="0" border="0" height="100%" width="100%" style="border-collapse:collapse;">
+      <tr>
+        <td><center style="width: 100%;">
+            
+            <tr>
+        <td><center style="width: 100%;">
+            
+            <!-- Visually Hidden Preheader Text : BEGIN -->
+            <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: sans-serif;"> (Optional) This text will appear in the inbox preview, but not the email body. </div>
+            <!-- Visually Hidden Preheader Text : END --> 
+            
+            <!-- Email Header : BEGIN -->
+            <table align="center" width="800" class="email-container"><br>
+				
+            <tr><img src="https://lh3.googleusercontent.com/svKmK0Yn2mSRaDgRVaQqJ-pwmCIwstZwGqy_xkFOkAAStwMBJCVuAZMPsUM5hVsAq9DSwnJtVZXsljlkBWuU8BoRJQ7yrEgBDgU3RBmnYisNthiw1xXVmxm16BO8roAszJkpowEw=w2400" width="400" height="200" alt="BIOSCOPE_LOGO" border="0" align="center">
+                <td style="padding: 0px 0; text-align: center"></td>
+              </tr>
+          </table>
+		
+            <!-- Email Header : END -->--> 
+            
+            <!-- Email Body : BEGIN -->
+            <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff" width="600" class="email-container">
+            
+            <!-- Hero Image, Flush : BEGIN -->
+            
+            <!-- Hero Image, Flush : END --> 
+            
+            <!-- 1 Column Text : BEGIN -->
+            <tr>
+                <td class="textbg" style="background: #FFFFFF; padding: 40px; text-align: justify; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #000000;"> 
+		<h3 style="font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif';"><b><i>"An event to aspire and inspire you on the aesthetics of cinema and film making..!"</i></b></h3>
+					<pre style="text-align: right"><b></b></pre>
+        <p class="title of" style="color: #FF0000; font-weight: bold; text-align: left; font-size: 16px;">Dear Friends!</p>
+
+We all would have seen a lot of movies from our childhood. We love them, We get inspired by them.
+<br>
+<p>Our motto is to promote a basic understanding of technical aspects of <b>movie making</b> and to them in showcasing their <b>artistic talent</b> through motion pictures.</p>
+					<p>We would love to share with you the process in which a <b>single line goes through</b> to become a complete movie (or) a short film over an event <b style="color: #FF0000; font-weight: bold;">"Bioscope's Genesis"</b></p>
+
+<p>Join us tomorrow by 2 pm along with <b>Mr. Akash Vijay</b>, YouTuber, "<b style="color: #ff0000;font-family: Cosmic Sans MC,Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', 'serif'">Take Ok</b>", and <b>Mr. Mouli Tanuj</b>, YouTuber, ""<b style="color: #ff0000; font-family: Cosmic Sans MC,Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', 'serif'">Mouli Talks</b>" in MS Teams.</p><br>
+					<img src="https://lh3.googleusercontent.com/iutgS08l12hwG0d_oAN4sDJuvD9iRfbMtKipmlupXUsmXyapAxYNbkxwCHPqxVDxw5n2ACr9HDdp-1ry_6fBKQCTFNHigf6iI8_l4L2Y48vmQsKj-yUsNCr7BEDvI03AW3a3m92scw=w2400" width="1340" alt="POSTER" border="0" align="center" style="width: 100%; max-width: 600px; height: auto;">
+<p class="title of" style="color: #FF2D43; font-weight: bold; text-align: left; font-size: 20px;"><u>Event Details:</u></p>
+				<b style="font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, 'serif'Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', 'serif'"><u>Name:</u></b> Bioscope's Genesis<br>
+<b style="font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, 'serif'Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', 'serif'"><u>Date:</u></b> Friday<br>
+<b style="font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, 'serif'Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', 'serif'"><u>Time:</u></b> 2 pm to 3:30 pm<br>
+<b style="font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, 'serif'Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', 'serif'"><u>Venue:</u></b> MS Teams<br>
+					<b style="font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, 'serif'Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', 'serif'"><u>Link:</u></b> <a href="https://teams.microsoft.com/l/meetup-join/19%3a2d3XtwEbSFNDgPB0cLTMXfW5yR3BDZBGA9bztz5rvng1%40thread.tacv2/1629387067001?context=%7b%22Tid%22%3a%22ff335ba2-bb68-489a-bbdd-f49ab4319838%22%2c%22Oid%22%3a%22aea1eb15-747e-4aa3-b11b-05f33cfee6b3%22%7d">Click here @2pm to join</a>
+					
+<!-- Two Even Columns : BEGIN -->
+            <tr>
+                <td align="center" valign="top" style="padding: 10px;"><table cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr>
+                    <td class="stack-column-center"><table cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                        <td style="padding: 8px; text-align: center"><img src="https://lh3.googleusercontent.com/Fv7iTTkVHBjeQCz0npuIT-IkUmAbZTxIEcp1nVIFRwPsAbSCLvxFkXWje_uBJdJisReh1HsmnWNBcIcsOAuWC9nsLvrU8RVWGIpi9f-PgQbFPApImJ5Y86M0rS8NAEkJrkmySYQp8A=w2400" width="280" height="280" alt="alt_text" border="0" class="fluid"></td>
+                      </tr>
+                        <tr> </tr>
+                      </table></td>
+                    <td class="stack-column-center"><table cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                        <td style="padding: 8px; text-align: center"><img src="https://lh3.googleusercontent.com/QGa3QdE8O8AAYqleA5dLEZA4vV9ekThoBn8KTQROERZy2r8uhQCbyNva8Ja_XZEqW4tKSOKqQ9jUUdjg-_H_qYKBJUvwegENICT3mFHIIZVuL8D-y66om2fVl5sPGKrwYuxKvx2Krg=w2400" width="280" height="280" alt="alt_text" border="0" class="fluid"></td>
+                      </tr>
+                        <tr> </tr>
+                      </table></td>
+                  
+            <!-- Two Even Columns : END --> 
+                
+                <!-- Button : Begin -->
+                
+                <table cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
+                    <tr>
+                    <td style="border-radius: 2px; background: #FF0000; text-align: center;" class="button-td"><a href="https://teams.microsoft.com/l/meetup-join/19%3a2d3XtwEbSFNDgPB0cLTMXfW5yR3BDZBGA9bztz5rvng1%40thread.tacv2/1629387067001?context=%7b%22Tid%22%3a%22ff335ba2-bb68-489a-bbdd-f49ab4319838%22%2c%22Oid%22%3a%22aea1eb15-747e-4aa3-b11b-05f33cfee6b3%22%7d" style="background: #FF0000; border: 3px solid #FF0000;padding: 20px;color: #FFFFFF; font-family: sans-serif; font-size: 15px; line-height: 0.1; text-align: center; text-decoration: none; display: block; border-radius: 5px; font-weight: bold;" class="button-a" alt="Meeting Link"> 
+						<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->Click here @2pm to join<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]--> 
+                      </a></td>
+                  </tr>
+				</table>
+                <!-- Button : END --></td>
+              </tr>
+            <!-- 1 Column Text : BEGIN -->   
+          </table>
+            <!-- Email Body : END --> 
+            
+            <!-- Email Footer : BEGIN -->
+            <table align="center" width="600" class="email-container">
+            <tr>
+              <td style="padding: 20px 10px;width: 100%;font-size: 16px; font-family: sans-serif; mso-height-rule: exactly; line-height:18px; text-align: center; color: #BBBBBB;"><webversion style="color:#cccccc; text-decoration:underline; font-weight: bold;"><a href="https://www.vitapbioscope.com/" style="color: #FFFFFF" title="WEBSITE"></a></webversion><br>
+				  <a href="https://www.youtube.com/c/BIOSCOPEVITAP"><img src="https://lh3.googleusercontent.com/RxdlvIeZeFUxLrnH0ClYmah94eTMMQNWH1c09mLD8LP7-06HHQGLWqiaqK0Dt79gALWQqYi1cnpdbcJzZYkgU474G_6Zo3NLVLCoPH6CLp0fDJhPeO4Alu9PlMVrNZ-ZJd3cXd1UIQ=s64-p-k" width="55" height="50" alt="yt" title="YOUTUBE">
+				</a> 
+				  <a href="https://www.instagram.com/vitap_bioscope" style="padding-left: 20px"><img src="https://lh3.googleusercontent.com/Z4t6ZixrB1UUEBrf6QnCeCKtYJX0CDZwfRBpwPuH6nAVv9tK8arMP6iox2DU1CaNgEe2DYOUVXw2cc5HBvFGnPob9i1PmO2W7woPjfzD45fvTNhXm_0daEjEfZLz50jrvYX3U5bnoA=s64-p-k" width="50" height="50" alt="insta" title="INSTAGRAM">
+				</a><br>
+				  <a href="https://www.vitapbioscope.com/" style="color: #FFFFFF" title="WEBSITE">www.vitapbioscope.com</a> <p> BIOSCOPE, VIT-AP </p>
+                <span class="mobile-link--footer">AMARAVATHI, ANDHRA PRADESH</span> <br>
+                <unsubscribe style="color:#888888;text-align; text-decoration:underline;"></unsubscribe></td>
+              </tr>
+          </table>
+            <!-- Email Footer : END -->
+            
+          </center></td>
+      </tr>
+    </table>
+</body>
+</html>
+
